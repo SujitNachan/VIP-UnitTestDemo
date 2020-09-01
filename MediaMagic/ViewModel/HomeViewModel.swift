@@ -27,11 +27,15 @@ class HomeViewModel: BaseViewModel {
                         self?.baseViewModelProtocol?.refreshUI()
                     }
                 } catch let error {
-                    self.baseViewModelProtocol?.showInternalMessage(error: error.localizedDescription)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.baseViewModelProtocol?.showInternalMessage(error: error.localizedDescription)
+                    }
                 }
             }
             if let error = error {
-                self.baseViewModelProtocol?.showInternalMessage(error: error.localizedDescription)
+                DispatchQueue.main.async { [weak self] in
+                    self?.baseViewModelProtocol?.showInternalMessage(error: error.localizedDescription)
+                }
             }
         }
     }
