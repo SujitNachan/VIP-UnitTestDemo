@@ -2,17 +2,14 @@
 //  HomeCollectionViewCell.swift
 //  MediaMagic
 //
-//  Created by Sujit Nachan on 31/08/20.
-//  Copyright © 2020 Sujit Nachan. All rights reserved.
+//  Created by  on 15/09/22.
+//  Copyright © 2022 Sujit Nachan. All rights reserved.
 //
 
 import UIKit
 
-class BaseCollectionViewCell: UICollectionViewCell, ReusableView, NibLoadableView {
-    
-}
+class HomeCollectionViewCell: UICollectionViewCell, ReusableView {
 
-class HomeCollectionViewCell: BaseCollectionViewCell {
     //MARK: Outlet
     @IBOutlet weak var imgView: CustomImageView!
     @IBOutlet weak var label: UILabel!
@@ -22,5 +19,10 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
             imgView.loadImage(urlString: celldata?.photoURL)
             label.text = celldata?.author
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
 }
