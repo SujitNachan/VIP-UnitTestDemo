@@ -11,12 +11,13 @@ import UIKit
 class HomeViewController: UIViewController {
     var interactor: HomeViewInteractorInterface?
     private var activityView: UIActivityIndicatorView?
-    private var photos: [Photos] = []
-    
-    var collectionView: UICollectionView?
+    private var photos: [PhotoViewModel] = []
+    private var alertPresentationCompletion: (() -> Void)?
+    private var collectionView: UICollectionView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "List"
         setupCollectionView()
         interactor?.fetchPhotos()
     }
@@ -25,17 +26,35 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let screenSize = UIScreen.main.bounds.size.width
-        let itemSize = screenSize / 2
-        layout.itemSize = CGSize(width: itemSize, height: itemSize + 30)
+        let itemSize = screenSize - 20
+        layout.itemSize = CGSize(width: itemSize, height: itemSize * 0.8)
         layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = 20
         collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         if let collectionView = collectionView {
             self.view.addSubview(collectionView)
         }
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
+        collectionView?.register(HomeCollectionViewCell.self)
+    }
+    
+    private func showAlertViewWithStyle(title: String, message: String, actionTitles: [String], style: UIAlertController.Style = .alert, handler: [((UIAlertAction) -> Void)?]) {
+        // create the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        for (index, title) in actionTitles.enumerated() {
+            // add an action (button)
+            if !handler.isEmpty {
+                alert.addAction(UIAlertAction(title: title, style: .default, handler: handler[index]))
+            } else {
+                alert.addAction(UIAlertAction(title: title, style: .default, handler: nil))
+            }
+        }
+        if style == .actionSheet {
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        }
+        // show the alert
+        self.present(alert, animated: true, completion: alertPresentationCompletion)
     }
 }
 
@@ -52,11 +71,13 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        interactor?.photoDidSelect(photoViewModel: photos[indexPath.row])
+    }
 }
 
 extension HomeViewController: HomeViewControllerInterface {
-    func update(photos: [Photos]) {
+    func update(photos: [PhotoViewModel]) {
         self.photos = photos
         DispatchQueue.main.async { [weak self] in
             self?.collectionView?.reloadData()
@@ -80,9 +101,8 @@ extension HomeViewController: HomeViewControllerInterface {
         
     }
     
-    func showAlertView() {
-        
+    func showAlertView(message: String) {
+        showAlertViewWithStyle(title: "Error", message: message, actionTitles: ["Ok"], handler: [])
     }
-    
-    
 }
+

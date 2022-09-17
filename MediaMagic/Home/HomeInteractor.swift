@@ -22,6 +22,10 @@ class HomeViewInteractor {
 }
 
 extension HomeViewInteractor: HomeViewInteractorInterface {
+    func photoDidSelect(photoViewModel: PhotoViewModel) {
+        router.navigateToDetailsScreen(photoViewModel: photoViewModel)
+    }
+    
     func fetchPhotos() {
         presenter.showActivityIndicator()
         service.fetchPhotos { [weak self] result in
@@ -30,11 +34,17 @@ extension HomeViewInteractor: HomeViewInteractorInterface {
             switch result {
             case .sucess(let response):
                 self.photos = response.photos
-                self.presenter.update(photos: response.photos ?? [])
-                break
+                
+                
+                self.presenter.update(photos: response.photos?.compactMap({ PhotoViewModel(photos: $0)}) ?? [])
             case .failure(let error):
-                break
+                DispatchQueue.main.async { [weak self] in
+                    self?.presenter.showAlertView(message: error.localizedDescription)
+                }
             }
         }
     }
+    
+    
 }
+

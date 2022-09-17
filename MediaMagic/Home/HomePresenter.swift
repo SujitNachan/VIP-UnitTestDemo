@@ -9,11 +9,11 @@
 import Foundation
 
 class HomeViewPresenter {
-    var viewController: HomeViewControllerInterface?
+    weak var viewController: HomeViewControllerInterface?
 }
 
 extension HomeViewPresenter: HomeViewPresenterInterface {
-    func update(photos: [Photos]) {
+    func update(photos: [PhotoViewModel]) {
         viewController?.update(photos: photos)
     }
     
@@ -25,9 +25,7 @@ extension HomeViewPresenter: HomeViewPresenterInterface {
         viewController?.hideActivityIndicator()
     }
     
-    func showAlertView() {
-        viewController?.showAlertView()
-    }
-    
-    
+    func showAlertView(message: String) {
+        viewController?.showAlertView(message: message)
+    }    
 }

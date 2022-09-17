@@ -17,11 +17,12 @@ class HomeConfigurator: Configurator {
     func configViewController() -> UIViewController {
         let viewController = HomeViewController()
         let homeViewPresenter = HomeViewPresenter()
-        homeViewPresenter.viewController = viewController
         let homeViewRouter = HomeViewRouter()
         let homeService = HomeService()
         let interactor = HomeViewInteractor(presenter: homeViewPresenter, router: homeViewRouter, service: homeService)
+        homeViewPresenter.viewController = viewController
         viewController.interactor = interactor
+        homeViewRouter.viewController = viewController
         return viewController
     }
 }

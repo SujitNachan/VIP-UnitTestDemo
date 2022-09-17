@@ -8,24 +8,29 @@
 
 import Foundation
 
-protocol HomeViewControllerInterface {
+protocol PresenterViewInterface: AnyObject {
+    
+}
+
+protocol HomeViewControllerInterface: PresenterViewInterface {
     func showActivityIndicator()
     func hideActivityIndicator()
-    func showAlertView()
-    func update(photos: [Photos])
+    func showAlertView(message: String)
+    func update(photos: [PhotoViewModel])
 }
 
 protocol HomeViewInteractorInterface {
     func fetchPhotos()
+    func photoDidSelect(photoViewModel: PhotoViewModel)
 }
 
 protocol HomeViewPresenterInterface {
     func showActivityIndicator()
     func hideActivityIndicator()
-    func showAlertView()
-    func update(photos: [Photos])
+    func showAlertView(message: String)
+    func update(photos: [PhotoViewModel])
 }
 
 protocol HomeViewRouterInterface {
-    
+    func navigateToDetailsScreen(photoViewModel: PhotoViewModel)
 }
