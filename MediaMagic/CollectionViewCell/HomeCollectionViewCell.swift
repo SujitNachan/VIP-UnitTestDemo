@@ -8,12 +8,6 @@
 
 import UIKit
 
-protocol HomeCollectionViewCellData {
-    var imageURL: String? { get }
-    var text: String? { get }
-}
-
-
 class HomeCollectionViewCell: UICollectionViewCell, ReusableView, NibLoadableView {
     
     private var cornerRadius: CGFloat = 5.0
@@ -23,7 +17,7 @@ class HomeCollectionViewCell: UICollectionViewCell, ReusableView, NibLoadableVie
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var labelContainerView: UIView!
     
-    var celldata: HomeCollectionViewCellData? {
+    var celldata: HomeCollectionViewModel? {
         didSet {
             imgView.loadImage(urlString: celldata?.imageURL)
             label.text = celldata?.text

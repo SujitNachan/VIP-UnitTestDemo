@@ -16,21 +16,21 @@ protocol HomeViewControllerInterface: PresenterViewInterface {
     func showActivityIndicator()
     func hideActivityIndicator()
     func showAlertView(message: String)
-    func update(photos: [PhotoViewModel])
+    func update(photos: [HomeCollectionViewModel])
 }
 
 protocol HomeViewInteractorInterface {
     func fetchPhotos()
-    func photoDidSelect(photoViewModel: PhotoViewModel)
+    func photoDidSelect(homeCollectionViewModel: HomeCollectionViewModel)
 }
 
 protocol HomeViewPresenterInterface {
     func showActivityIndicator()
     func hideActivityIndicator()
     func showAlertView(message: String)
-    func update(photos: [PhotoViewModel])
+    func update(photos: [HomeCollectionViewModel])
 }
 
 protocol HomeViewRouterInterface {
-    func navigateToDetailsScreen(photoViewModel: PhotoViewModel)
+    func navigateToDetailsScreen(homeCollectionViewModel: HomeCollectionViewModel)
 }

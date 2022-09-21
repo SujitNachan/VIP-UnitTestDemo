@@ -8,23 +8,8 @@
 
 import Foundation
 
-class PhotoViewModel {
-    private let photos: Photos
-    init(photos: Photos) {
-        self.photos = photos
-    }
+struct HomeCollectionViewModel {
+    let text: String?
+    let imageURL: String?
 }
 
-extension PhotoViewModel: HomeCollectionViewCellData {
-    var imageURL: String? {
-        get {
-            return photos.photoURL
-        }
-    }
-    
-    var text: String? {
-        get {
-            return photos.author
-        }
-    }
-}

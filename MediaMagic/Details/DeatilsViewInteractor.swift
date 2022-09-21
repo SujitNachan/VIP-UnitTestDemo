@@ -11,18 +11,18 @@ import Foundation
 class DetailsViewInteractor {
     private let presenter: DetailsViewPresenterInterface
     private let router: DetailsViewRouterInterface
-    private let photoViewModel: PhotoViewModel
+    private let homeCollectionViewModel: HomeCollectionViewModel
     
-    init(presenter: DetailsViewPresenterInterface, router: DetailsViewRouterInterface, photoViewModel: PhotoViewModel) {
+    init(presenter: DetailsViewPresenterInterface, router: DetailsViewRouterInterface, homeCollectionViewModel: HomeCollectionViewModel) {
         self.presenter = presenter
         self.router = router
-        self.photoViewModel = photoViewModel
+        self.homeCollectionViewModel = homeCollectionViewModel
      }
     
 }
 
 extension DetailsViewInteractor: DetailsViewInteractorInterface {
-    func getDisplayData() -> PhotoViewModel {
-        return photoViewModel
+    func getDisplayData() -> HomeCollectionViewModel {
+        return homeCollectionViewModel
     }
 }

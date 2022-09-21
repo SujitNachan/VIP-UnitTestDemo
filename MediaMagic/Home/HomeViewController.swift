@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     var interactor: HomeViewInteractorInterface?
     private var activityView: UIActivityIndicatorView?
-    private var photos: [PhotoViewModel] = []
+    private var photos: [HomeCollectionViewModel] = []
     private var alertPresentationCompletion: (() -> Void)?
     private var collectionView: UICollectionView?
 
@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         interactor?.fetchPhotos()
     }
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let screenSize = UIScreen.main.bounds.size.width
@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         }
         // show the alert
-        self.present(alert, animated: true, completion: alertPresentationCompletion)
+        self.showDetailViewController(alert, sender: self)
     }
 }
 
@@ -72,12 +72,12 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        interactor?.photoDidSelect(photoViewModel: photos[indexPath.row])
+        interactor?.photoDidSelect(homeCollectionViewModel: photos[indexPath.row])
     }
 }
 
 extension HomeViewController: HomeViewControllerInterface {
-    func update(photos: [PhotoViewModel]) {
+    func update(photos: [HomeCollectionViewModel]) {
         self.photos = photos
         DispatchQueue.main.async { [weak self] in
             self?.collectionView?.reloadData()

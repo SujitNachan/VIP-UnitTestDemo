@@ -13,8 +13,8 @@ class HomeViewRouter {
 }
 
 extension HomeViewRouter: HomeViewRouterInterface {
-    func navigateToDetailsScreen(photoViewModel: PhotoViewModel) {
-        let detailsViewConfigurator = DetailsViewConfigurator(photoViewModel: photoViewModel)
-        self.viewController?.navigationController?.pushViewController(detailsViewConfigurator.configViewController(), animated: true)
+    func navigateToDetailsScreen(homeCollectionViewModel: HomeCollectionViewModel) {
+        let detailsViewConfigurator = DetailsViewConfigurator(homeCollectionViewModel: homeCollectionViewModel)
+        self.viewController?.show(detailsViewConfigurator.configViewController(), sender: viewController)
     }
 }

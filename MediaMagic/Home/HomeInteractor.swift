@@ -22,8 +22,8 @@ class HomeViewInteractor {
 }
 
 extension HomeViewInteractor: HomeViewInteractorInterface {
-    func photoDidSelect(photoViewModel: PhotoViewModel) {
-        router.navigateToDetailsScreen(photoViewModel: photoViewModel)
+    func photoDidSelect(homeCollectionViewModel: HomeCollectionViewModel) {
+        router.navigateToDetailsScreen(homeCollectionViewModel: homeCollectionViewModel)
     }
     
     func fetchPhotos() {
@@ -36,7 +36,7 @@ extension HomeViewInteractor: HomeViewInteractorInterface {
                 self.photos = response.photos
                 
                 
-                self.presenter.update(photos: response.photos?.compactMap({ PhotoViewModel(photos: $0)}) ?? [])
+                self.presenter.update(photos: response.photos?.compactMap({ HomeCollectionViewModel(text: $0.author, imageURL: $0.photoURL)}) ?? [])
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
                     self?.presenter.showAlertView(message: error.localizedDescription)

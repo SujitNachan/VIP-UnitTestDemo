@@ -13,7 +13,7 @@ protocol DetailsViewControllerInterface: PresenterViewInterface {
 }
 
 protocol DetailsViewInteractorInterface {
-    func getDisplayData() -> PhotoViewModel
+    func getDisplayData() -> HomeCollectionViewModel
 }
 
 protocol DetailsViewPresenterInterface {

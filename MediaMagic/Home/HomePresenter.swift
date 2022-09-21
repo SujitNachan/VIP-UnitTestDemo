@@ -13,7 +13,7 @@ class HomeViewPresenter {
 }
 
 extension HomeViewPresenter: HomeViewPresenterInterface {
-    func update(photos: [PhotoViewModel]) {
+    func update(photos: [HomeCollectionViewModel]) {
         viewController?.update(photos: photos)
     }
     
