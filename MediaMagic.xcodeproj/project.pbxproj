@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81133F1128D5AEA300B6F43D /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1028D5AEA300B6F43D /* PhotosViewModel.swift */; };
+		81133F1128D5AEA300B6F43D /* HomeCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1028D5AEA300B6F43D /* HomeCollectionViewModel.swift */; };
 		81133F1428D5B0E900B6F43D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1328D5B0E900B6F43D /* DetailsViewController.swift */; };
 		81133F1628D5B10B00B6F43D /* DetailsViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1528D5B10B00B6F43D /* DetailsViewConfigurator.swift */; };
 		81133F1828D5B12200B6F43D /* DeatilsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1728D5B12200B6F43D /* DeatilsViewInteractor.swift */; };
@@ -54,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		81133F1028D5AEA300B6F43D /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		81133F1028D5AEA300B6F43D /* HomeCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewModel.swift; sourceTree = "<group>"; };
 		81133F1328D5B0E900B6F43D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		81133F1528D5B10B00B6F43D /* DetailsViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewConfigurator.swift; sourceTree = "<group>"; };
 		81133F1728D5B12200B6F43D /* DeatilsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeatilsViewInteractor.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		81D5D0C824FD38EE0078DF4A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				81133F1028D5AEA300B6F43D /* PhotosViewModel.swift */,
+				81133F1028D5AEA300B6F43D /* HomeCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -410,7 +410,7 @@
 				81133F1828D5B12200B6F43D /* DeatilsViewInteractor.swift in Sources */,
 				81133F1628D5B10B00B6F43D /* DetailsViewConfigurator.swift in Sources */,
 				81A8AD2A28D30491009D0A7E /* HomeInterfaces.swift in Sources */,
-				81133F1128D5AEA300B6F43D /* PhotosViewModel.swift in Sources */,
+				81133F1128D5AEA300B6F43D /* HomeCollectionViewModel.swift in Sources */,
 				81133F1A28D5B14F00B6F43D /* DetailsViewPresenter.swift in Sources */,
 				81A8AD3628D386EF009D0A7E /* HomeCollectionViewCell.swift in Sources */,
 				81133F1428D5B0E900B6F43D /* DetailsViewController.swift in Sources */,
