@@ -14,10 +14,16 @@
 		81133F1A28D5B14F00B6F43D /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1928D5B14F00B6F43D /* DetailsViewPresenter.swift */; };
 		81133F1C28D5B16100B6F43D /* DetailsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1B28D5B16100B6F43D /* DetailsViewRouter.swift */; };
 		81133F1E28D5B18C00B6F43D /* DetailsViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81133F1D28D5B18C00B6F43D /* DetailsViewInterfaces.swift */; };
-		81A8AD2628D3043D009D0A7E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2528D3043D009D0A7E /* HomeInteractor.swift */; };
-		81A8AD2828D30464009D0A7E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2728D30464009D0A7E /* HomePresenter.swift */; };
-		81A8AD2A28D30491009D0A7E /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2928D30491009D0A7E /* HomeInterfaces.swift */; };
-		81A8AD2C28D304A3009D0A7E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2B28D304A3009D0A7E /* HomeRouter.swift */; };
+		8146E44B28DC772E00A808DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146E44A28DC772E00A808DA /* Extensions.swift */; };
+		819E86ED28F8162E007E4355 /* HomeViewInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E86EC28F8162E007E4355 /* HomeViewInteractorTest.swift */; };
+		819E86F028F819D7007E4355 /* HomeMockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E86EF28F819D7007E4355 /* HomeMockPresenter.swift */; };
+		819E86F228F819F9007E4355 /* HomeMockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E86F128F819F9007E4355 /* HomeMockViewController.swift */; };
+		819E86F428F81A0C007E4355 /* HomeMockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E86F328F81A0C007E4355 /* HomeMockRouter.swift */; };
+		819E86F628F8218A007E4355 /* HomeMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E86F528F8218A007E4355 /* HomeMockService.swift */; };
+		81A8AD2628D3043D009D0A7E /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2528D3043D009D0A7E /* HomeViewInteractor.swift */; };
+		81A8AD2828D30464009D0A7E /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2728D30464009D0A7E /* HomeViewPresenter.swift */; };
+		81A8AD2A28D30491009D0A7E /* HomeViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2928D30491009D0A7E /* HomeViewInterfaces.swift */; };
+		81A8AD2C28D304A3009D0A7E /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2B28D304A3009D0A7E /* HomeViewRouter.swift */; };
 		81A8AD2F28D3093D009D0A7E /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD2E28D3093D009D0A7E /* ServiceProtocol.swift */; };
 		81A8AD3128D348CF009D0A7E /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD3028D348CF009D0A7E /* HomeConfigurator.swift */; };
 		81A8AD3628D386EF009D0A7E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A8AD3428D386EF009D0A7E /* HomeCollectionViewCell.swift */; };
@@ -28,9 +34,8 @@
 		81D5D09524FD30A30078DF4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D5D09324FD30A30078DF4A /* Main.storyboard */; };
 		81D5D09724FD30A50078DF4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D5D09624FD30A50078DF4A /* Assets.xcassets */; };
 		81D5D09A24FD30A50078DF4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D5D09824FD30A50078DF4A /* LaunchScreen.storyboard */; };
-		81D5D0A524FD30A50078DF4A /* MediaMagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0A424FD30A50078DF4A /* MediaMagicTests.swift */; };
+		81D5D0A524FD30A50078DF4A /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0A424FD30A50078DF4A /* HomeViewControllerTest.swift */; };
 		81D5D0B024FD30A50078DF4A /* MediaMagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0AF24FD30A50078DF4A /* MediaMagicUITests.swift */; };
-		81D5D0C324FD35EB0078DF4A /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0C224FD35EB0078DF4A /* CollectionViewExtension.swift */; };
 		81D5D0C524FD37A90078DF4A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0C424FD37A80078DF4A /* Photos.swift */; };
 		81D5D0D124FD3A650078DF4A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0D024FD3A650078DF4A /* APIManager.swift */; };
 		81D5D0D324FD49E30078DF4A /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5D0D224FD49E30078DF4A /* CustomImageView.swift */; };
@@ -61,10 +66,16 @@
 		81133F1928D5B14F00B6F43D /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
 		81133F1B28D5B16100B6F43D /* DetailsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewRouter.swift; sourceTree = "<group>"; };
 		81133F1D28D5B18C00B6F43D /* DetailsViewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewInterfaces.swift; sourceTree = "<group>"; };
-		81A8AD2528D3043D009D0A7E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
-		81A8AD2728D30464009D0A7E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		81A8AD2928D30491009D0A7E /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
-		81A8AD2B28D304A3009D0A7E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		8146E44A28DC772E00A808DA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		819E86EC28F8162E007E4355 /* HomeViewInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractorTest.swift; sourceTree = "<group>"; };
+		819E86EF28F819D7007E4355 /* HomeMockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMockPresenter.swift; sourceTree = "<group>"; };
+		819E86F128F819F9007E4355 /* HomeMockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMockViewController.swift; sourceTree = "<group>"; };
+		819E86F328F81A0C007E4355 /* HomeMockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMockRouter.swift; sourceTree = "<group>"; };
+		819E86F528F8218A007E4355 /* HomeMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMockService.swift; sourceTree = "<group>"; };
+		81A8AD2528D3043D009D0A7E /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		81A8AD2728D30464009D0A7E /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		81A8AD2928D30491009D0A7E /* HomeViewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInterfaces.swift; sourceTree = "<group>"; };
+		81A8AD2B28D304A3009D0A7E /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
 		81A8AD2E28D3093D009D0A7E /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		81A8AD3028D348CF009D0A7E /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		81A8AD3428D386EF009D0A7E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -78,12 +89,11 @@
 		81D5D09924FD30A50078DF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D5D09B24FD30A50078DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D5D0A024FD30A50078DF4A /* MediaMagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaMagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81D5D0A424FD30A50078DF4A /* MediaMagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMagicTests.swift; sourceTree = "<group>"; };
+		81D5D0A424FD30A50078DF4A /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		81D5D0A624FD30A50078DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D5D0AB24FD30A50078DF4A /* MediaMagicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaMagicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D5D0AF24FD30A50078DF4A /* MediaMagicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMagicUITests.swift; sourceTree = "<group>"; };
 		81D5D0B124FD30A50078DF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D5D0C224FD35EB0078DF4A /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		81D5D0C424FD37A80078DF4A /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		81D5D0D024FD3A650078DF4A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		81D5D0D224FD49E30078DF4A /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
@@ -127,14 +137,34 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		819E86EB28F8160C007E4355 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				81D5D0A424FD30A50078DF4A /* HomeViewControllerTest.swift */,
+				819E86EC28F8162E007E4355 /* HomeViewInteractorTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		819E86EE28F8199F007E4355 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				819E86EF28F819D7007E4355 /* HomeMockPresenter.swift */,
+				819E86F128F819F9007E4355 /* HomeMockViewController.swift */,
+				819E86F328F81A0C007E4355 /* HomeMockRouter.swift */,
+				819E86F528F8218A007E4355 /* HomeMockService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		81A8AD2428D303B3009D0A7E /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				81D5D09124FD30A30078DF4A /* HomeViewController.swift */,
-				81A8AD2528D3043D009D0A7E /* HomeInteractor.swift */,
-				81A8AD2728D30464009D0A7E /* HomePresenter.swift */,
-				81A8AD2928D30491009D0A7E /* HomeInterfaces.swift */,
-				81A8AD2B28D304A3009D0A7E /* HomeRouter.swift */,
+				81A8AD2528D3043D009D0A7E /* HomeViewInteractor.swift */,
+				81A8AD2728D30464009D0A7E /* HomeViewPresenter.swift */,
+				81A8AD2928D30491009D0A7E /* HomeViewInterfaces.swift */,
+				81A8AD2B28D304A3009D0A7E /* HomeViewRouter.swift */,
 				81A8AD3028D348CF009D0A7E /* HomeConfigurator.swift */,
 			);
 			path = Home;
@@ -194,7 +224,8 @@
 		81D5D0A324FD30A50078DF4A /* MediaMagicTests */ = {
 			isa = PBXGroup;
 			children = (
-				81D5D0A424FD30A50078DF4A /* MediaMagicTests.swift */,
+				819E86EE28F8199F007E4355 /* Mock */,
+				819E86EB28F8160C007E4355 /* Home */,
 				81D5D0A624FD30A50078DF4A /* Info.plist */,
 			);
 			path = MediaMagicTests;
@@ -212,7 +243,7 @@
 		81D5D0C124FD35CB0078DF4A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				81D5D0C224FD35EB0078DF4A /* CollectionViewExtension.swift */,
+				8146E44A28DC772E00A808DA /* Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -404,19 +435,19 @@
 				81A8AD2F28D3093D009D0A7E /* ServiceProtocol.swift in Sources */,
 				81D5D09024FD30A30078DF4A /* SceneDelegate.swift in Sources */,
 				81A8AD3128D348CF009D0A7E /* HomeConfigurator.swift in Sources */,
-				81A8AD2C28D304A3009D0A7E /* HomeRouter.swift in Sources */,
-				81D5D0C324FD35EB0078DF4A /* CollectionViewExtension.swift in Sources */,
+				81A8AD2C28D304A3009D0A7E /* HomeViewRouter.swift in Sources */,
 				81133F1C28D5B16100B6F43D /* DetailsViewRouter.swift in Sources */,
 				81133F1828D5B12200B6F43D /* DeatilsViewInteractor.swift in Sources */,
 				81133F1628D5B10B00B6F43D /* DetailsViewConfigurator.swift in Sources */,
-				81A8AD2A28D30491009D0A7E /* HomeInterfaces.swift in Sources */,
+				81A8AD2A28D30491009D0A7E /* HomeViewInterfaces.swift in Sources */,
 				81133F1128D5AEA300B6F43D /* HomeCollectionViewModel.swift in Sources */,
+				8146E44B28DC772E00A808DA /* Extensions.swift in Sources */,
 				81133F1A28D5B14F00B6F43D /* DetailsViewPresenter.swift in Sources */,
 				81A8AD3628D386EF009D0A7E /* HomeCollectionViewCell.swift in Sources */,
 				81133F1428D5B0E900B6F43D /* DetailsViewController.swift in Sources */,
-				81A8AD2628D3043D009D0A7E /* HomeInteractor.swift in Sources */,
+				81A8AD2628D3043D009D0A7E /* HomeViewInteractor.swift in Sources */,
 				81D5D0D324FD49E30078DF4A /* CustomImageView.swift in Sources */,
-				81A8AD2828D30464009D0A7E /* HomePresenter.swift in Sources */,
+				81A8AD2828D30464009D0A7E /* HomeViewPresenter.swift in Sources */,
 				81D5D0C524FD37A90078DF4A /* Photos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +456,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81D5D0A524FD30A50078DF4A /* MediaMagicTests.swift in Sources */,
+				81D5D0A524FD30A50078DF4A /* HomeViewControllerTest.swift in Sources */,
+				819E86F228F819F9007E4355 /* HomeMockViewController.swift in Sources */,
+				819E86F628F8218A007E4355 /* HomeMockService.swift in Sources */,
+				819E86F028F819D7007E4355 /* HomeMockPresenter.swift in Sources */,
+				819E86ED28F8162E007E4355 /* HomeViewInteractorTest.swift in Sources */,
+				819E86F428F81A0C007E4355 /* HomeMockRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

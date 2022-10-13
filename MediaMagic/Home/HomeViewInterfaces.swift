@@ -22,6 +22,7 @@ protocol HomeViewControllerInterface: PresenterViewInterface {
 protocol HomeViewInteractorInterface {
     func fetchPhotos()
     func photoDidSelect(homeCollectionViewModel: HomeCollectionViewModel)
+    func cancelDataTask()
 }
 
 protocol HomeViewPresenterInterface {

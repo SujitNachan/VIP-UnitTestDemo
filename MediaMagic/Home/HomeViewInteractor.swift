@@ -6,12 +6,17 @@
 //  Copyright © 2022 Sujit Nachan. All rights reserved.
 //
 
+//V --> I --> P
+//<------------
+
+
 import Foundation
 
 class HomeViewInteractor {
     private let presenter: HomeViewPresenterInterface
     private let router: HomeViewRouterInterface
     private let service: ServiceProtocol
+    private var dataTask: Task?
     private var photos: [Photos]?
     
     init(presenter: HomeViewPresenterInterface, router: HomeViewRouterInterface, service: ServiceProtocol) {
@@ -28,23 +33,22 @@ extension HomeViewInteractor: HomeViewInteractorInterface {
     
     func fetchPhotos() {
         presenter.showActivityIndicator()
-        service.fetchPhotos { [weak self] result in
+        dataTask = service.fetchPhotos { [weak self] result in
             guard let self = self else { return }
             self.presenter.hideActivityIndicator()
             switch result {
-            case .sucess(let response):
+            case .success(let response):
                 self.photos = response.photos
-                
-                
                 self.presenter.update(photos: response.photos?.compactMap({ HomeCollectionViewModel(text: $0.author, imageURL: $0.photoURL)}) ?? [])
             case .failure(let error):
-                DispatchQueue.main.async { [weak self] in
-                    self?.presenter.showAlertView(message: error.localizedDescription)
-                }
+                self.presenter.showAlertView(message: error.localizedDescription)
             }
         }
+//        cancelDataTask()
     }
     
-    
+    func cancelDataTask() {
+        dataTask?.cancel()
+    }
 }
 

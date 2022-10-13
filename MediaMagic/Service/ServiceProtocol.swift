@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum Result<Value, Error> {
-    case sucess(Value)
-    case failure(Error)
-}
-
 struct ResponeModel {
     let photos: [Photos]?
     
@@ -21,25 +16,34 @@ struct ResponeModel {
     }
 }
 
+protocol Task {
+    func cancel()
+}
+
 protocol ServiceProtocol {
-    func fetchPhotos(completion: @escaping (Result<ResponeModel, Error>) -> Void)
+    func fetchPhotos(completion: @escaping (Result<ResponeModel, Error>) -> Void) -> Task
 }
 
 class HomeService: ServiceProtocol {
-    func fetchPhotos(completion: @escaping ((Result<ResponeModel, Error>) -> Void)) {
-        APIManager.shared.fetchData(urlString: APIManager.shared.photosURL) { (data, error) in
+    func fetchPhotos(completion: @escaping ((Result<ResponeModel, Error>) -> Void)) -> Task {
+        let task = APIManager.shared.fetchData(urlString: APIManager.shared.photosURL) { (data, error) in
             if let error = error {
                 completion(.failure(error))
             }
             if let data = data {
                 do {
                     let baseJson = try JSONDecoder().decode([Photos].self, from: data)
-                    completion(.sucess(ResponeModel(photos: baseJson)))
+                    DispatchQueue.main.async {
+                        completion(.success(ResponeModel(photos: baseJson)))
+                    }
                     
                 } catch let error {
-                    completion(.failure(error))
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                    }
                 }
             }
         }
+        return task
     }
 }

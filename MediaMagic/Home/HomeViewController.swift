@@ -38,24 +38,6 @@ class HomeViewController: UIViewController {
         collectionView?.dataSource = self
         collectionView?.register(HomeCollectionViewCell.self)
     }
-    
-    private func showAlertViewWithStyle(title: String, message: String, actionTitles: [String], style: UIAlertController.Style = .alert, handler: [((UIAlertAction) -> Void)?]) {
-        // create the alert
-        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
-        for (index, title) in actionTitles.enumerated() {
-            // add an action (button)
-            if !handler.isEmpty {
-                alert.addAction(UIAlertAction(title: title, style: .default, handler: handler[index]))
-            } else {
-                alert.addAction(UIAlertAction(title: title, style: .default, handler: nil))
-            }
-        }
-        if style == .actionSheet {
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        }
-        // show the alert
-        self.showDetailViewController(alert, sender: self)
-    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -79,9 +61,7 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: HomeViewControllerInterface {
     func update(photos: [HomeCollectionViewModel]) {
         self.photos = photos
-        DispatchQueue.main.async { [weak self] in
-            self?.collectionView?.reloadData()
-        }
+        self.collectionView?.reloadData()
     }
     
     func showActivityIndicator() {
@@ -92,11 +72,8 @@ extension HomeViewController: HomeViewControllerInterface {
     }
     
     func hideActivityIndicator() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            if (self.activityView != nil){
-                self.activityView?.stopAnimating()
-            }
+        if (self.activityView != nil){
+            self.activityView?.stopAnimating()
         }
         
     }

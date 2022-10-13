@@ -14,8 +14,8 @@
             filePath = "MediaMagic/Home/HomeInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "fetchPhotos()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,58 +30,10 @@
             filePath = "MediaMagic/Home/HomeInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "fetchPhotos()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4C86DA8D-CCBE-40B9-8B9F-F57E5A6914AA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MediaMagic/Service/ServiceProtocol.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchPhotos(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4C86DA8D-CCBE-40B9-8B9F-F57E5A6914AA - 24b9fbb59eae1fdc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MediaMagic.HomeService.fetchPhotos(completion: (MediaMagic.Result&lt;MediaMagic.ResponeModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MediaMagic"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sujit/Documents/MyWork/Media-Magic/MediaMagic/Service/ServiceProtocol.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "179">
-               </Location>
-               <Location
-                  uuid = "4C86DA8D-CCBE-40B9-8B9F-F57E5A6914AA - 24b9fbb59eae1fdc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MediaMagic.HomeService.fetchPhotos(completion: (MediaMagic.Result&lt;MediaMagic.ResponeModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MediaMagic"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sujit/Documents/MyWork/Media-Magic/MediaMagic/Service/ServiceProtocol.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "207">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -119,16 +71,144 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0F53ACC8-6846-495B-B50C-8B9B287518E4"
+            uuid = "5DC67C53-6E13-4B1F-BC20-3DE9A87EEFB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MediaMagic/Service/ServiceProtocol.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchPhotos(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C4F4CD5-2F28-4B50-AC0C-44187D788EBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MediaMagic/Service/ServiceProtocol.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchPhotos(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C4F4CD5-2F28-4B50-AC0C-44187D788EBF - 76987375d9ab3b12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MediaMagic.HomeService.fetchPhotos(completion: (Swift.Result&lt;MediaMagic.ResponeModel, Swift.Error&gt;) -&gt; ()) -&gt; MediaMagic.Task"
+                  moduleName = "MediaMagic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujit/Documents/MyWork/Media-Magic/MediaMagic/Service/ServiceProtocol.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "179">
+               </Location>
+               <Location
+                  uuid = "8C4F4CD5-2F28-4B50-AC0C-44187D788EBF - 76987375d9ab3b12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MediaMagic.HomeService.fetchPhotos(completion: (Swift.Result&lt;MediaMagic.ResponeModel, Swift.Error&gt;) -&gt; ()) -&gt; MediaMagic.Task"
+                  moduleName = "MediaMagic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujit/Documents/MyWork/Media-Magic/MediaMagic/Service/ServiceProtocol.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "207">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "532C82A0-886A-4747-84A0-982DC4244E5D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MediaMagicTests/Mock/HomeMockService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "fetchPhotos(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "532C82A0-886A-4747-84A0-982DC4244E5D - 7d6e060b9b7ce61d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MediaMagicTests.HomeMockService.fetchPhotos(completion: (Swift.Result&lt;MediaMagic.ResponeModel, Swift.Error&gt;) -&gt; ()) -&gt; MediaMagic.Task"
+                  moduleName = "MediaMagicTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujit/Documents/MyWork/Media-Magic/MediaMagicTests/Mock/HomeMockService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "133">
+               </Location>
+               <Location
+                  uuid = "532C82A0-886A-4747-84A0-982DC4244E5D - 7d6e060b9b7ce799"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MediaMagicTests.HomeMockService.fetchPhotos(completion: (Swift.Result&lt;MediaMagic.ResponeModel, Swift.Error&gt;) -&gt; ()) -&gt; MediaMagic.Task"
+                  moduleName = "MediaMagicTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujit/Documents/MyWork/Media-Magic/MediaMagicTests/Mock/HomeMockService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "133">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0516DA8D-1314-44FC-A3EA-BA18D1BCEC0B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MediaMagic/Home/HomeViewController.swift"
+            filePath = "MediaMagic/Home/HomeViewInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetchPhotos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84DB6D01-55C6-4D4E-B127-3B8BC50D7AD7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MediaMagicTests/Home/HomeViewInteractorTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "setUp()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

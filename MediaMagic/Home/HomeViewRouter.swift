@@ -14,6 +14,8 @@ class HomeViewRouter {
 
 extension HomeViewRouter: HomeViewRouterInterface {
     func navigateToDetailsScreen(homeCollectionViewModel: HomeCollectionViewModel) {
+        //
+        print("HomeViewRouter -> naviagte to detailScreen")
         let detailsViewConfigurator = DetailsViewConfigurator(homeCollectionViewModel: homeCollectionViewModel)
         self.viewController?.show(detailsViewConfigurator.configViewController(), sender: viewController)
     }

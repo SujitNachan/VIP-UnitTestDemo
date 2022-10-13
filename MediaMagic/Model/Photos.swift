@@ -22,18 +22,7 @@ struct Photos : Codable {
 		case post_url = "post_url"
 	}
 
-	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		format = try values.decodeIfPresent(String.self, forKey: .format)
-		width = try values.decodeIfPresent(Int.self, forKey: .width)
-		height = try values.decodeIfPresent(Int.self, forKey: .height)
-		filename = try values.decodeIfPresent(String.self, forKey: .filename)
-		id = try values.decodeIfPresent(Int.self, forKey: .id)
-		author = try values.decodeIfPresent(String.self, forKey: .author)
-		author_url = try values.decodeIfPresent(String.self, forKey: .author_url)
-		post_url = try values.decodeIfPresent(String.self, forKey: .post_url)
-	}
-
+	
     var photoURL: String? {
         if let id = id {
             return "https://picsum.photos/300/300?image=\(id.description)"

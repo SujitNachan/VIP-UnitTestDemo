@@ -23,7 +23,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = interactor.getDisplayData().text
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
     }
 }
 
