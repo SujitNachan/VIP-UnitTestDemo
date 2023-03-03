@@ -1,5 +1,5 @@
-# Media-Magic
+# Clean architecture with Unit test cases
 
-- VIPER Architecture is used in this project
+- VIP Architecture is used in this project
 - Written Unit test cases with service data mocking
 - Followed SOLID principles
